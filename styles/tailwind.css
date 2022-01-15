@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  button {
+    @apply text-dark rounded-md border-2 border-dark py-3 px-5 flex justify-between items-center space-x-4 hover:bg-gray-500;
+  }
+
+  @font-face {
+    src: url(/fonts/ITC-md.ttf);
+    font-weight: 400;
+    font-family: "avant";
+  }
+
+  @font-face {
+    src: url(/fonts/ITC-bd.ttf);
+    font-weight: 800;
+    font-family: "avant";
+  }
+}
