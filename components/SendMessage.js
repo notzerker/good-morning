@@ -5,6 +5,13 @@ const SendMessage = ({ endOfMessagesRef }) => {
   const { user, Moralis } = useMoralis();
   const message = "gm";
 
+  const scrollTo = (ref) => {
+    if (!ref.current) return;
+    else {
+      endOfMessagesRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const sendMessage = () => {
     const Messages = Moralis.Object.extend("Messages");
     const messages = new Messages();
@@ -23,9 +30,9 @@ const SendMessage = ({ endOfMessagesRef }) => {
           console.log(error.message);
         }
       );
-  };
 
-  // endOfMessagesRef.current.scrollIntoView({ behavior: "smooth" });
+    scrollTo(endOfMessagesRef);
+  };
 
   return (
     <div className="fixed bottom-12 z-50">
