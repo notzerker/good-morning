@@ -36,7 +36,7 @@ const Messages = () => {
         <SendMessage endOfMessagesRef={endOfMessagesRef} />
       </div>
       <div ref={endOfMessagesRef} className="text-center text-dark mt-5">
-        <p>You're up to date!</p>
+        {/* <p>Up to date!</p> */}
       </div>
     </div>
   );
