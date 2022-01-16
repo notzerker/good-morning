@@ -8,16 +8,16 @@ const Header = () => {
   const { user, logout } = useMoralis();
 
   return (
-    <div className="sticky top-0 w-full h-80 backdrop-blur-xl flex flex-row justify-between items-center px-8">
-      <div className="relative h-24 w-24 hidden lg:inline"></div>
+    <div className="sticky top-0 w-full h-64 bg-primary flex flex-row justify-center items-center px-8 z-50">
       <div className="flex flex-col justify-center items-center">
-        <div className="h-48 w-48 relative mb-8">
+        <div className="h-24 w-24 relative mb-8">
           <Avatar />
         </div>
-        <h1 className="text-dark text-3xl font-bold">Good Morning! 🌞</h1>
-        <h2 className=" truncate">{user.getUsername()}</h2>
+        <h1 className="text-dark text-5xl font-bold mb-2">Good Morning!</h1>
+        <p className="text-lg">Say it back</p>
+        {/* <h2 className=" truncate">{user.getUsername()}</h2> */}
       </div>
-      <button className="" onClick={logout}>
+      <button className="absolute text-xs top-8 left-8" onClick={logout}>
         Logout
       </button>
       <ChangeUsername />

@@ -4,7 +4,7 @@
 
 @layer base {
   button {
-    @apply text-dark rounded-md border-2 border-dark py-3 px-5 flex justify-between items-center space-x-4 hover:bg-gray-500;
+    @apply text-black rounded-md border-2 border-black py-3 px-5 flex justify-between items-center space-x-4 hover:bg-white/10;
   }
 
   @font-face {

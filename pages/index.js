@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="">
       <Head>
-        <title>Monke Chat</title>
+        <title>Good Morning</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="max-w-screen-2xl mx-auto">
