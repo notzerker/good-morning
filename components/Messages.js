@@ -23,10 +23,8 @@ const Messages = () => {
     }
   );
 
-  console.log(data);
-
   return (
-    <div className="pb-56 mx-64">
+    <div className="pt-4 pb-56 mx-16 lg:mx-64">
       <div className="space-y-10 p-4">
         {data.map((message) => (
           <Message key={message.id} message={message} />

@@ -11,17 +11,12 @@ export default function Home() {
   if (!isAuthenticated) return <Login />;
 
   return (
-    <div className="">
+    <div className="bg-primary dark:bg-dark">
       <Head>
         <title>Good Morning</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="max-w-screen-2xl mx-auto">
-        {/* <img
-          className="absolute w-full h-full object-cover"
-          src="/images/bg.jpg"
-          alt=""
-        /> */}
+      <div className="max-w-screen-2xl mx-auto bg-primary dark:bg-dark">
         <Header />
         <Messages />
       </div>

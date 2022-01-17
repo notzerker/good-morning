@@ -6,7 +6,7 @@ const Avatar = ({ username }) => {
   return (
     <Image
       className="rounded-full"
-      src={`https://avatars.dicebear.com/api/pixel-art-neutral/${
+      src={`https://avatars.dicebear.com/api/adventurer-neutral/${
         username || user.get("username")
       }.svg`}
       layout="fill"

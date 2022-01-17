@@ -1,22 +1,24 @@
+import { useState } from "react";
 import { useMoralis } from "react-moralis";
+import Modal from "./Modal";
 
 const ChangeUsername = () => {
   const { setUserData, isUserUpdating, userError, user } = useMoralis();
+  const [modal, setModal] = useState(false);
 
-  const setUsername = () => {
-    const username = prompt("Enter username");
-
-    if (!username) return;
-
-    setUserData({ username });
+  const modalHandler = () => {
+    setModal(!modal);
   };
 
   return (
-    <div className="text-xs absolute top-8 right-8">
-      <button disabled={isUserUpdating} onClick={setUsername}>
-        Change your Username
-      </button>
-    </div>
+    <>
+      <Modal open={modal} setOpen={setModal} />
+      <div className="text-xs absolute top-8 right-8">
+        <button disabled={isUserUpdating} onClick={modalHandler}>
+          Change Username
+        </button>
+      </div>
+    </>
   );
 };
 
