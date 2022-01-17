@@ -8,7 +8,7 @@ import Connect from "./Connect";
 
 const Login = () => {
   const { authenticate, isAuthenticating } = useMoralis();
-  const [connect, setConnect] = useState(false);
+  const [connect, setConnect] = useState(true);
 
   return (
     <>
