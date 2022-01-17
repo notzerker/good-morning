@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useMoralis } from "react-moralis";
+import { AiOutlineClose } from "react-icons/ai";
 
 const Modal = ({ open, setOpen }) => {
   const { setUserData, isUserUpdating, userError, user } = useMoralis();
@@ -29,6 +30,10 @@ const Modal = ({ open, setOpen }) => {
         open ? "translate-y-0" : "-translate-y-96"
       }`}
     >
+      <AiOutlineClose
+        className="absolute top-3 right-3 cursor-pointer"
+        onClick={() => setOpen(false)}
+      />
       <p className="mb-2">Username</p>
       <input
         className="mb-4 bg-primary text-black border-2 border-black focus:outline-none rounded-md px-2 placeholder-black focus:placeholder-transparent"
