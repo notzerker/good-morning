@@ -5,6 +5,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import { useState } from "react";
 import Connect from "./Connect";
+import Typewriter from "typewriter-effect";
 
 const Login = () => {
   const { authenticate, isAuthenticating } = useMoralis();
@@ -19,9 +20,23 @@ const Login = () => {
             <h1 className="text-bold text-7xl text-center lg:text-8xl mb-2 font-bold">
               Good Morning
             </h1>
-            <p className="mb-12 text-xl text-center">Have a good day.</p>
+            <div className="mb-12 text-xl text-center">
+              <Typewriter
+                options={{
+                  strings: [
+                    "Make today a great day!",
+                    "Keep going!",
+                    "Have a good day!",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </div>
+            {/* <p className="mb-12 text-xl text-center">Have a good day.</p> */}
             <button className="w-64 mb-20" onClick={() => setConnect(false)}>
-              <p>Connect Wallet</p>
+              <p>Login with wallet</p>
+              <BsArrowRightShort className="text-xl" />
               {isAuthenticating ? (
                 <BounceLoader color="#000000" size={20} />
               ) : (

@@ -3,7 +3,46 @@ import { useMoralis } from "react-moralis";
 
 const SendMessage = ({ endOfMessagesRef }) => {
   const { user, Moralis } = useMoralis();
-  const message = "gm";
+  var emojis = [
+    "😄",
+    "😃",
+    "😀",
+    "😊",
+    "😉",
+    "😍",
+    "😘",
+    "😚",
+    "😗",
+    "😙",
+    "😜",
+    "😝",
+    "😛",
+    "😁",
+    "😌",
+    "😂",
+    "😭",
+    "😅",
+    "😆",
+    "😋",
+    "😎",
+    "😇",
+    "😏",
+    "😺",
+    "😸",
+    "😻",
+    "😽",
+    "😼",
+    "😹",
+    "🔥",
+    "🌞",
+    "💛",
+  ];
+
+  const getEmoji = () => {
+    return emojis[Math.floor(Math.random() * emojis.length)];
+  };
+
+  const message = "gm " + getEmoji();
 
   const scrollTo = (ref) => {
     if (!ref.current) return;
@@ -11,6 +50,8 @@ const SendMessage = ({ endOfMessagesRef }) => {
       endOfMessagesRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  scrollTo(endOfMessagesRef);
 
   const sendMessage = () => {
     const Messages = Moralis.Object.extend("Messages");

@@ -1,6 +1,6 @@
 import React from "react";
 import { useMoralis } from "react-moralis";
-import { BiArrowBack } from "react-icons/bi";
+import { BsArrowLeftShort } from "react-icons/bs";
 
 const Connect = ({ setConnect }) => {
   const { authenticate, isAuthenticating } = useMoralis();
@@ -11,7 +11,7 @@ const Connect = ({ setConnect }) => {
         className="flex flex-row space-x-2 cursor-pointer items-center justify-start mb-4"
         onClick={() => setConnect(true)}
       >
-        <BiArrowBack />
+        <BsArrowLeftShort className="text-xl" />
         <p>Back</p>
       </div>
       {/* <p className="mb-2">Login with wallet to enter.</p> */}
